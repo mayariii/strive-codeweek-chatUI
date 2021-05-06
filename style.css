@@ -1,0 +1,83 @@
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Roboto',
+        sans-serif;
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-container {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.profile-img {
+    border-radius: 50%;
+    border: 5px solid white;
+    background-color: white;
+
+    width: 75px;
+    height: 75px;
+    margin-left: 30px;
+}
+
+/* message content */
+.message-content {
+    border-radius: 15px;
+    position: relative;
+    background-color: #0078FF;
+    padding: 15px 20px;
+    max-width: 60ch;
+}
+
+.name {
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+}
+
+.pointer {
+    color: #0078FF;
+    font-size: 2rem;
+
+    position: absolute;
+    right: -20px;
+    top: 50%;
+}
+
+.message-to {
+    flex-direction: row-reverse;
+}
+
+/* receipient message styling */
+.message-to img {
+    margin-right: 30px;
+    margin-left: 0;
+}
+
+.message-to .pointer {
+    left: -20px;
+    transform: scaleX(-1);
+}
+
+/* interactions */
+.timestamp {
+    padding-top: 5px;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(25%);
+    transition: all 0.2s ease-in-out;
+}
+
+.message-content:hover p {
+    opacity: 1;
+    transform: translateY(0%);
+}
